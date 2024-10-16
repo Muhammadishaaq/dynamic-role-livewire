@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
 
         // Hr role
         $adminRole = Role::create(['name' => 'Admin']);
-        $adminRole->givePermissionTo(Permission::all());
+        $userRole = Role::create(['name' => 'Employee']);
 
         // Create Admin user
         $admin = new User();
@@ -32,5 +32,16 @@ class UserSeeder extends Seeder
         $admin->phone_number = '1234567890';
         $admin->save();
         $admin->assignRole('Admin');
+
+        $user = new User();
+        $user->name = 'user';
+        $user->email = 'user@gmail.com';
+        $user->password = Hash::make('password');
+        $user->email_verified_at = now();
+        $user->position = 'Employee';
+        $user->department = 'Head';
+        $user->phone_number = '1234567890';
+        $user->save();
+        $user->assignRole('Employee');
     }
 }

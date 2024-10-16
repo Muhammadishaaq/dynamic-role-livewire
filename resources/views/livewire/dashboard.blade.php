@@ -1,5 +1,5 @@
-<!-- Define a section named 'content' -->
-    <div class="container">
+<x-layouts.main>
+    <div class='container'>
         <h1>Dashboard</h1>
 
         <div class="row">
@@ -34,3 +34,4 @@
             </div>
         </div>
     </div>
+</x-layouts.main>

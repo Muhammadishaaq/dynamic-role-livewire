@@ -3,11 +3,12 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-
 class Dashboard extends Component
-{
-    public function render()
+{ 
+    
+    public function index()
     {
+     
         return view('livewire.dashboard')->layout('layouts.main');
     }
 }
